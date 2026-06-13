@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTEINS - Menu</title>
+    <link rel="stylesheet" href="css/global.css">
+
+</head>
+
+<body>
+ 
+<nav class="navbar">
+  <div class="logo">
+    <img src="img/logo.png" alt="Proteins">
+  </div>
+ 
+  <div class="right-group">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" >Início</a></li>
+      <li><a href="#" class="active">Sobre</a></li>
+      <li><a href="portfolio.html" >Portfólio</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+ 
+    <div class="lang-switch" id="langSwitch">
+      <span class="flag" id="currentFlag">
+        <svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg">
+          <rect width="720" height="504" fill="#009b3a"/>
+          <polygon points="360,40 690,252 360,464 30,252" fill="#fedf00"/>
+          <circle cx="360" cy="252" r="120" fill="#002776"/>
+        </svg>
+      </span>
+      <span id="currentLangLabel">PT-BR</span>
+      <span class="lang-arrow">&#9662;</span>
+ 
+      <div class="lang-dropdown" id="langDropdown">
+        <div class="lang-option selected" data-lang="pt-BR">
+          <span class="flag">
+            <svg viewBox="0 0 720 504" xmlns="http://www.w3.org/2000/svg">
+              <rect width="720" height="504" fill="#009b3a"/>
+              <polygon points="360,40 690,252 360,464 30,252" fill="#fedf00"/>
+              <circle cx="360" cy="252" r="120" fill="#002776"/>
+            </svg>
+          </span>
+          <span>PT-BR</span>
+        </div>
+        <div class="lang-option" data-lang="en">
+          <span class="flag">
+            <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+              <rect width="60" height="30" fill="#012169"/>
+              <path d="M0,0 60,30 M60,0 0,30" stroke="#fff" stroke-width="6"/>
+              <path d="M0,0 60,30 M60,0 0,30" stroke="#C8102E" stroke-width="2"/>
+              <path d="M30,0 30,30 M0,15 60,15" stroke="#fff" stroke-width="10"/>
+              <path d="M30,0 30,30 M0,15 60,15" stroke="#C8102E" stroke-width="6"/>
+            </svg>
+          </span>
+          <span>EN</span>
+        </div>
+        <div class="lang-option" data-lang="es">
+          <span class="flag">
+            <svg viewBox="0 0 750 500" xmlns="http://www.w3.org/2000/svg">
+              <rect width="750" height="500" fill="#AA151B"/>
+              <rect width="750" height="250" y="125" fill="#F1BF00"/>
+            </svg>
+          </span>
+          <span>ES</span>
+        </div>
+      </div>
+    </div>
+ 
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
+  </div>
+</nav>
+ 
+
+
+ 
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <span class="footer-brand">PROTE<span class="i-icon">I</span>NS &copy; 2026</span>
+    <span class="footer-rights">Todos os direitos reservados</span>
+  </div>
+</footer>
+<script>
+  // Menu mobile
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+ 
+  // Dropdown de idiomas
+  const langSwitch = document.getElementById('langSwitch');
+  const langDropdown = document.getElementById('langDropdown');
+  const currentFlag = document.getElementById('currentFlag');
+  const currentLangLabel = document.getElementById('currentLangLabel');
+  const langOptions = document.querySelectorAll('.lang-option');
+ 
+  const labels = { 'pt-BR': 'PT-BR', 'en': 'EN', 'es': 'ES' };
+ 
+  langSwitch.addEventListener('click', (e) => {
+    langDropdown.classList.toggle('show');
+    langSwitch.classList.toggle('open');
+  });
+ 
+  // Fecha o dropdown ao clicar fora
+  document.addEventListener('click', (e) => {
+    if (!langSwitch.contains(e.target)) {
+      langDropdown.classList.remove('show');
+      langSwitch.classList.remove('open');
+    }
+  });
+ 
+  langOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      const lang = option.dataset.lang;
+ 
+      // Atualiza bandeira e label exibidos
+      currentFlag.innerHTML = option.querySelector('.flag').innerHTML;
+      currentLangLabel.textContent = labels[lang];
+ 
+      // Marca opção selecionada
+      langOptions.forEach(o => o.classList.remove('selected'));
+      option.classList.add('selected');
+ 
+      // Fecha dropdown
+      langDropdown.classList.remove('show');
+      langSwitch.classList.remove('open');
+ 
+      // Dispara evento para integração com a API de tradução do site
+      document.dispatchEvent(new CustomEvent('languageChange', {
+        detail: { lang: lang }
+      }));
+    });
+  });
+</script>
+ 
+</body>
+
+</html>
