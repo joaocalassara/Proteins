@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROTEINS - Menu</title>
+    <title data-i18n="meta.index.title">PROTEINS - Início</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -21,10 +21,10 @@
  
   <div class="right-group">
     <ul class="nav-links" id="navLinks">
-      <li><a href="#" class="active">Início</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="portfolio.html">Portfólio</a></li>
-      <li><a href="contato.html">Contato</a></li>
+      <li><a href="#" class="active" data-i18n="nav.home">Início</a></li>
+      <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfólio</a></li>
+      <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
     </ul>
  
     <div class="lang-switch" id="langSwitch">
@@ -79,11 +79,11 @@
  
 <section class="hero">
     <div class="hero-content">
-      <h1>Proteínas alternativas para a nutrição animal do <span class="highlight">futuro</span></h1>
-      <p>A PROTEINS – Proteínas Alternativas, residente no Biopark de Toledo–PR, pesquisa, desenvolve e produz ingredientes sustentáveis a partir de Black Soldier Fly (BSF), com qualidade, rastreabilidade e eficiência.</p>
+      <h1 data-i18n-html="home.hero.title">Proteínas alternativas para a nutrição animal do <span class="highlight">futuro</span></h1>
+      <p data-i18n="home.hero.text">A PROTEINS – Proteínas Alternativas, residente no Biopark de Toledo–PR, pesquisa, desenvolve e produz ingredientes sustentáveis a partir de Black Soldier Fly (BSF), com qualidade, rastreabilidade e eficiência.</p>
       <div class="hero-buttons">
-        <a href="contato.html" class="btn btn-light">Entre em contato</a>
-        <a href="portfolio.html" class="btn btn-gold">Conheça nossos produtos!</a>
+        <a href="contato.html" class="btn btn-light" data-i18n="home.hero.btnContact">Entre em contato</a>
+        <a href="portfolio.html" class="btn btn-gold" data-i18n="home.hero.btnProducts">Conheça nossos produtos!</a>
       </div>
     </div>
   </section>
@@ -94,33 +94,33 @@
 
 <main class="home-main">
 
-  <h2 class="section-title">Veja a PROTEINS em ação</h2>
+  <h2 class="section-title" data-i18n="home.showcase.title">Veja a PROTEINS em ação</h2>
 
   <section class="showcase">
 
     <article class="showcase-card">
       <div class="showcase-media">
-        <img src="img/mosca2.png" alt="Black Soldier Fly (Hermetia illucens)">
+        <img src="img/mosca2.png" data-i18n-alt="home.showcase.bsf.title" alt="Black Soldier Fly (BSF)">
       </div>
       <div class="showcase-info">
-        <h3>Black Soldier Fly (BSF)</h3>
-        <p>Larvas de <em>Hermetia illucens</em> transformam resíduos orgânicos em proteína e óleo de alta qualidade, com ciclo de vida curto e produção adaptável a sistemas verticais e automatizados.</p>
+        <h3 data-i18n="home.showcase.bsf.title">Black Soldier Fly (BSF)</h3>
+        <p data-i18n-html="home.showcase.bsf.text">Larvas de <em>Hermetia illucens</em> transformam resíduos orgânicos em proteína e óleo de alta qualidade, com ciclo de vida curto e produção adaptável a sistemas verticais e automatizados.</p>
       </div>
     </article>
 
     <article class="showcase-card">
       <div class="showcase-media">
-        <img src="img/cardinformativo.jpg" alt="Fazenda vertical de produção">
+        <img src="img/cardinformativo.jpg" data-i18n-alt="home.showcase.alt.farm" alt="Fazenda vertical de produção">
       </div>
       <div class="showcase-thumbs">
         <div class="thumb">
-          <img src="img/farinha.jpg" alt="Aplicação em peixes">
+          <img src="img/farinha.jpg" data-i18n-alt="home.showcase.alt.fish" alt="Farinha de larvas BSF">
         </div>
         <div class="thumb">
-          <img src="img/larva.jpg" alt="Aplicação em aves de corte">
+          <img src="img/larva.jpg" data-i18n-alt="home.showcase.alt.poultry" alt="Larvas secas de BSF">
         </div>
         <div class="thumb">
-          <img src="img/larva2.jpg" alt="Aplicação em suínos">
+          <img src="img/larva2.jpg" data-i18n-alt="home.showcase.alt.swine" alt="Larvas vivas de BSF">
         </div>
       </div>
     </article>
@@ -133,65 +133,11 @@
 <footer class="site-footer">
   <div class="footer-content">
     <span class="footer-brand">PROTE<span class="i-icon">I</span>NS &copy; 2026</span>
-    <span class="footer-rights">Todos os direitos reservados</span>
+    <span class="footer-rights" data-i18n="footer.rights">Todos os direitos reservados</span>
   </div>
 </footer>
-<script>
-  // Menu mobile
-  const navLinks = document.getElementById('navLinks');
-  document.getElementById('menuToggle').addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
-
-  navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
-  });
- 
-  // Dropdown de idiomas
-  const langSwitch = document.getElementById('langSwitch');
-  const langDropdown = document.getElementById('langDropdown');
-  const currentFlag = document.getElementById('currentFlag');
-  const currentLangLabel = document.getElementById('currentLangLabel');
-  const langOptions = document.querySelectorAll('.lang-option');
- 
-  const labels = { 'pt-BR': 'PT-BR', 'en': 'EN', 'es': 'ES' };
- 
-  langSwitch.addEventListener('click', (e) => {
-    langDropdown.classList.toggle('show');
-    langSwitch.classList.toggle('open');
-  });
- 
-  // Fecha o dropdown ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (!langSwitch.contains(e.target)) {
-      langDropdown.classList.remove('show');
-      langSwitch.classList.remove('open');
-    }
-  });
- 
-  langOptions.forEach(option => {
-    option.addEventListener('click', () => {
-      const lang = option.dataset.lang;
- 
-      // Atualiza bandeira e label exibidos
-      currentFlag.innerHTML = option.querySelector('.flag').innerHTML;
-      currentLangLabel.textContent = labels[lang];
- 
-      // Marca opção selecionada
-      langOptions.forEach(o => o.classList.remove('selected'));
-      option.classList.add('selected');
- 
-      // Fecha dropdown
-      langDropdown.classList.remove('show');
-      langSwitch.classList.remove('open');
- 
-      // Dispara evento para integração com a API de tradução do site
-      document.dispatchEvent(new CustomEvent('languageChange', {
-        detail: { lang: lang }
-      }));
-    });
-  });
-</script>
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
  
 </body>
 

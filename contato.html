@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROTEINS - Contato</title>
+    <title data-i18n="meta.contact.title">PROTEINS - Contato</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/contato.css">
 </head>
@@ -18,10 +18,10 @@
  
   <div class="right-group">
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" >Início</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="portfolio.html">Portfólio</a></li>
-      <li><a href="contato.html" class="active">Contato</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+      <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfólio</a></li>
+      <li><a href="contato.html" class="active" data-i18n="nav.contact">Contato</a></li>
     </ul>
  
     <div class="lang-switch" id="langSwitch">
@@ -77,83 +77,96 @@
 <main class="contact-main">
 
   <section class="contact-hero">
-    <h1 class="page-title">Entre em <span class="hl">Contato</span></h1>
-    <p class="contact-intro">Tem dúvidas sobre nossos ingredientes, quer conhecer o PROFLY&reg; ou falar sobre parcerias comerciais? Preencha o formulário ou utilize nossos canais de atendimento.</p>
+    <h1 class="page-title" data-i18n-html="contact.title">Entre em <span class="hl">Contato</span></h1>
+    <p class="contact-intro" data-i18n="contact.intro">Tem dúvidas sobre nossos ingredientes, quer conhecer o PROFLY&reg; ou falar sobre parcerias comerciais? Preencha o formulário ou utilize nossos canais de atendimento.</p>
   </section>
 
   <div class="contact-layout">
 
     <aside class="contact-info">
       <div class="info-card">
-        <h2>Endereço</h2>
-        <p>Biopark – Toledo, PR</p>
-        <p>Brasil</p>
+        <h2 data-i18n="contact.address.label">Endereço</h2>
+        <p data-i18n="contact.address.line1">Biopark – Toledo, PR</p>
+        <p data-i18n="contact.address.line2">Brasil</p>
       </div>
 
       <div class="info-card">
-        <h2>E-mail</h2>
+        <h2 data-i18n="contact.email.label">E-mail</h2>
         <p><a href="mailto:contato@proteins.com.br">contato@proteins.com.br</a></p>
       </div>
 
       <div class="info-card">
-        <h2>Telefone</h2>
+        <h2 data-i18n="contact.phone.label">Telefone</h2>
         <p><a href="tel:+5545999999999">(45) 99999-9999</a></p>
       </div>
 
       <div class="info-card">
-        <h2>Horário</h2>
-        <p>Segunda a sexta, 8h às 18h</p>
+        <h2 data-i18n="contact.hours.label">Horário</h2>
+        <p data-i18n="contact.hours.text">Segunda a sexta, 8h às 18h</p>
       </div>
     </aside>
 
     <section class="contact-form-section">
-      <h2 class="form-title">Envie sua mensagem</h2>
+      <h2 class="form-title" data-i18n="contact.form.title">Envie sua mensagem</h2>
       <form class="contact-form" action="#" method="post">
 
         <div class="form-row">
           <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            <label for="nome" data-i18n="contact.form.name">Nome</label>
+            <input type="text" id="nome" name="nome" data-i18n-placeholder="contact.form.placeholder.name" placeholder="Seu nome completo" required>
           </div>
           <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            <label for="empresa" data-i18n="contact.form.company">Nome da Empresa</label>
+            <input type="text" id="empresa" name="empresa" data-i18n-placeholder="contact.form.placeholder.company" placeholder="Nome da sua empresa" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+            <label for="email" data-i18n="contact.form.email">E-mail</label>
+            <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.placeholder.email" placeholder="seu@email.com" required>
           </div>
           <div class="form-group">
-            <label for="assunto">Assunto</label>
+            <label for="telefone" data-i18n="contact.form.phone">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" data-i18n-placeholder="contact.form.placeholder.phone" placeholder="(00) 00000-0000" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="localizacao" data-i18n="contact.form.location">Cidade / Estado / País</label>
+            <input type="text" id="localizacao" name="localizacao" data-i18n-placeholder="contact.form.placeholder.location" placeholder="Cidade, Estado, País" required>
+          </div>
+          <div class="form-group">
+            <label for="assunto" data-i18n="contact.form.subject">Assunto</label>
             <select id="assunto" name="assunto" required>
-              <option value="" disabled selected>Selecione um assunto</option>
-              <option value="produtos">Produtos e portfólio</option>
-              <option value="parceria">Parceria comercial</option>
-              <option value="tecnico">Informações técnicas</option>
-              <option value="outro">Outro</option>
+              <option value="" disabled selected data-i18n="contact.form.subjectOptions.default">Selecione um assunto</option>
+              <option value="produtos" data-i18n="contact.form.subjectOptions.products">Produtos e portfólio</option>
+              <option value="parceria" data-i18n="contact.form.subjectOptions.partnership">Parceria comercial</option>
+              <option value="tecnico" data-i18n="contact.form.subjectOptions.technical">Informações técnicas</option>
+              <option value="outro" data-i18n="contact.form.subjectOptions.other">Outro</option>
             </select>
           </div>
         </div>
 
         <div class="form-group form-group--full">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+          <label for="mensagem" data-i18n="contact.form.message">Mensagem / Produto de Interesse</label>
+          <textarea id="mensagem" name="mensagem" data-i18n-placeholder="contact.form.placeholder.message" placeholder="Como podemos ajudar? Conte-nos sobre o produto de interesse." required></textarea>
         </div>
 
-        <button type="submit" class="btn-submit">Enviar mensagem</button>
+        <button type="submit" class="btn-submit" data-i18n="contact.form.submit">Enviar mensagem</button>
       </form>
     </section>
 
   </div>
 
   <section class="map-section">
-    <h2>Onde estamos</h2>
+    <h2 data-i18n="contact.map.heading">Onde estamos</h2>
     <div class="map-embed">
       <iframe
+        data-i18n-map
         src="https://maps.google.com/maps?q=Biopark+Toledo+PR&hl=pt-BR&z=14&output=embed"
+        data-i18n-title="contact.map.title"
         title="Localização do Biopark em Toledo, PR"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
@@ -167,65 +180,11 @@
 <footer class="site-footer">
   <div class="footer-content">
     <span class="footer-brand">PROTE<span class="i-icon">I</span>NS &copy; 2026</span>
-    <span class="footer-rights">Todos os direitos reservados</span>
+    <span class="footer-rights" data-i18n="footer.rights">Todos os direitos reservados</span>
   </div>
 </footer>
-<script>
-  // Menu mobile
-  const navLinks = document.getElementById('navLinks');
-  document.getElementById('menuToggle').addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
-
-  navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
-  });
- 
-  // Dropdown de idiomas
-  const langSwitch = document.getElementById('langSwitch');
-  const langDropdown = document.getElementById('langDropdown');
-  const currentFlag = document.getElementById('currentFlag');
-  const currentLangLabel = document.getElementById('currentLangLabel');
-  const langOptions = document.querySelectorAll('.lang-option');
- 
-  const labels = { 'pt-BR': 'PT-BR', 'en': 'EN', 'es': 'ES' };
- 
-  langSwitch.addEventListener('click', (e) => {
-    langDropdown.classList.toggle('show');
-    langSwitch.classList.toggle('open');
-  });
- 
-  // Fecha o dropdown ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (!langSwitch.contains(e.target)) {
-      langDropdown.classList.remove('show');
-      langSwitch.classList.remove('open');
-    }
-  });
- 
-  langOptions.forEach(option => {
-    option.addEventListener('click', () => {
-      const lang = option.dataset.lang;
- 
-      // Atualiza bandeira e label exibidos
-      currentFlag.innerHTML = option.querySelector('.flag').innerHTML;
-      currentLangLabel.textContent = labels[lang];
- 
-      // Marca opção selecionada
-      langOptions.forEach(o => o.classList.remove('selected'));
-      option.classList.add('selected');
- 
-      // Fecha dropdown
-      langDropdown.classList.remove('show');
-      langSwitch.classList.remove('open');
- 
-      // Dispara evento para integração com a API de tradução do site
-      document.dispatchEvent(new CustomEvent('languageChange', {
-        detail: { lang: lang }
-      }));
-    });
-  });
-</script>
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
  
 </body>
 

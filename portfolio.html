@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROTEINS - Portfólio</title>
+    <title data-i18n="meta.portfolio.title">PROTEINS - Portfólio</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/portfolio.css">
 
@@ -19,10 +19,10 @@
 
   <div class="right-group">
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="sobre.html">Sobre</a></li>
-      <li><a href="#" class="active">Portfólio</a></li>
-      <li><a href="contato.html">Contato</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Início</a></li>
+      <li><a href="sobre.html" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="#" class="active" data-i18n="nav.portfolio">Portfólio</a></li>
+      <li><a href="contato.html" data-i18n="nav.contact">Contato</a></li>
     </ul>
 
     <div class="lang-switch" id="langSwitch">
@@ -75,119 +75,151 @@
   </div>
 </nav>
 
-<main>
+<main class="portfolio-main">
   <section class="portfolio-section">
 
-    <h2 class="section-title">
-      Nosso <span class="hl">Portfólio</span>
-    </h2>
+    <header class="portfolio-header">
+      <h1 class="page-title" data-i18n-html="portfolio.title">Nosso <span class="hl">Portfólio</span></h1>
+      <p class="portfolio-intro" data-i18n="portfolio.intro">Ingredientes sustentáveis derivados de Black Soldier Fly (BSF), produzidos com qualidade, rastreabilidade e foco em nutrição animal e agricultura.</p>
+    </header>
 
     <div class="products-grid">
 
-      <!-- Produto 1: altere a imagem (src), o título (h3) e a descrição (p) -->
       <article class="product-card">
         <div class="product-card__media">
-          <img src="img/larva2.jpg" alt="Produto 1">
+          <img src="img/larva2.jpg" data-i18n-alt="portfolio.p1.alt" alt="Larvas vivas de Mosca-Soldado-Negra">
         </div>
         <div class="product-card__content">
-          <h3>Produto 1</h3>
-          <p>Larvas Vivas de Mosca-Soldado-Negra (BSF)
-As larvas vivas de Mosca-Soldado-Negra produzidas pela PROTEINS são criadas sob rigorosos padrões de qualidade e manejo, garantindo elevado desempenho nutricional e excelente vigor biológico. São destinadas principalmente à alimentação animal, reprodução, pesquisa, compostagem biológica e projetos de produção de insetos.
-As larvas vivas representam uma alternativa natural e sustentável para suplementação alimentar de aves, peixes, répteis e outras espécies, fornecendo proteínas, lipídios e micronutrientes essenciais.
-Principais aplicações:
-    • Alimentação de aves ornamentais e de produção. 
-    • Aquicultura e piscicultura. 
-    • Alimentação de répteis e animais exóticos. 
-    • Produção de matrizes e reprodução de BSF. 
-    • Compostagem e bioconversão de resíduos orgânicos. 
-    • Pesquisa e desenvolvimento. 
-Principais benefícios:
-    • Elevado valor nutricional. 
-    • Alta palatabilidade. 
-    • Produto natural e sustentável. 
-    • Excelente desempenho zootécnico. 
-    • Produção alinhada aos princípios da economia circular.</p>
+          <span class="product-tag" data-i18n="portfolio.tags.animal">Nutrição animal</span>
+          <h2 data-i18n="portfolio.p1.title">Larvas Vivas de Mosca-Soldado-Negra (BSF)</h2>
+          <p class="product-lead" data-i18n="portfolio.p1.lead">Criadas sob rigorosos padrões de qualidade e manejo, com elevado desempenho nutricional e excelente vigor biológico.</p>
+          <div class="product-details">
+            <div class="product-block">
+              <h3 data-i18n="portfolio.sections.applications">Principais aplicações</h3>
+              <ul>
+                <li data-i18n="portfolio.p1.apps.0">Alimentação de aves ornamentais e de produção</li>
+                <li data-i18n="portfolio.p1.apps.1">Aquicultura e piscicultura</li>
+                <li data-i18n="portfolio.p1.apps.2">Alimentação de répteis e animais exóticos</li>
+                <li data-i18n="portfolio.p1.apps.3">Produção de matrizes e reprodução de BSF</li>
+                <li data-i18n="portfolio.p1.apps.4">Compostagem e bioconversão de resíduos orgânicos</li>
+                <li data-i18n="portfolio.p1.apps.5">Pesquisa e desenvolvimento</li>
+              </ul>
+            </div>
+            <div class="product-block">
+              <h3 data-i18n="portfolio.sections.benefits">Principais benefícios</h3>
+              <ul>
+                <li data-i18n="portfolio.p1.bens.0">Elevado valor nutricional</li>
+                <li data-i18n="portfolio.p1.bens.1">Alta palatabilidade</li>
+                <li data-i18n="portfolio.p1.bens.2">Produto natural e sustentável</li>
+                <li data-i18n="portfolio.p1.bens.3">Excelente desempenho zootécnico</li>
+                <li data-i18n="portfolio.p1.bens.4">Produção alinhada à economia circular</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </article>
 
-      <!-- Produto 2 -->
-      <article class="product-card">
+      <article class="product-card product-card--reverse">
         <div class="product-card__media">
-          <img src="img/larva.jpg" alt="Produto 2">
+          <img src="img/larva.jpg" data-i18n-alt="portfolio.p2.alt" alt="Larvas secas de Mosca-Soldado-Negra">
         </div>
         <div class="product-card__content">
-          <h3>Produto 2</h3>
-          <p>Larvas Secas de Mosca-Soldado-Negra (BSF)
-As larvas secas de BSF são obtidas por meio de um processo controlado de desidratação, preservando suas características nutricionais e proporcionando maior estabilidade, facilidade de armazenamento e praticidade de uso.
-Ricas em proteínas, lipídios e minerais, são uma excelente opção para utilização direta na alimentação animal ou como ingrediente para formulações nutricionais.
-Principais aplicações:
-    • Alimentação de aves. 
-    • Aquicultura e piscicultura. 
-    • Pet food. 
-    • Alimentação de répteis e animais exóticos. 
-    • Formulações para nutrição animal. 
-    • Pesquisa e desenvolvimento de novos produtos. 
-Principais benefícios:
-    • Alto teor de proteína e energia. 
-    • Longa vida útil. 
-    • Fácil armazenamento e transporte. 
-    • Produto natural e sustentável. 
-    • Excelente aceitação pelos animais. 
-    • Redução de perdas associadas ao armazenamento de produtos frescos.</p>
+          <span class="product-tag" data-i18n="portfolio.tags.animal">Nutrição animal</span>
+          <h2 data-i18n="portfolio.p2.title">Larvas Secas de Mosca-Soldado-Negra (BSF)</h2>
+          <p class="product-lead" data-i18n="portfolio.p2.lead">Processo controlado de desidratação que preserva características nutricionais, com maior estabilidade e facilidade de armazenamento.</p>
+          <div class="product-details">
+            <div class="product-block">
+              <h3 data-i18n="portfolio.sections.applications">Principais aplicações</h3>
+              <ul>
+                <li data-i18n="portfolio.p2.apps.0">Alimentação de aves</li>
+                <li data-i18n="portfolio.p2.apps.1">Aquicultura e piscicultura</li>
+                <li data-i18n="portfolio.p2.apps.2">Pet food</li>
+                <li data-i18n="portfolio.p2.apps.3">Alimentação de répteis e animais exóticos</li>
+                <li data-i18n="portfolio.p2.apps.4">Formulações para nutrição animal</li>
+                <li data-i18n="portfolio.p2.apps.5">Pesquisa e desenvolvimento de novos produtos</li>
+              </ul>
+            </div>
+            <div class="product-block">
+              <h3 data-i18n="portfolio.sections.benefits">Principais benefícios</h3>
+              <ul>
+                <li data-i18n="portfolio.p2.bens.0">Alto teor de proteína e energia</li>
+                <li data-i18n="portfolio.p2.bens.1">Longa vida útil</li>
+                <li data-i18n="portfolio.p2.bens.2">Fácil armazenamento e transporte</li>
+                <li data-i18n="portfolio.p2.bens.3">Produto natural e sustentável</li>
+                <li data-i18n="portfolio.p2.bens.4">Excelente aceitação pelos animais</li>
+                <li data-i18n="portfolio.p2.bens.5">Redução de perdas no armazenamento</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </article>
 
-      <!-- Produto 3 -->
       <article class="product-card">
         <div class="product-card__media">
-          <img src="img/farinha.jpg" alt="Produto 3">
+          <img src="img/farinha.jpg" data-i18n-alt="portfolio.p3.alt" alt="Farinha de larvas de Mosca-Soldado-Negra">
         </div>
         <div class="product-card__content">
-          <h3>Produto 3</h3>
-          <p>Farinha de Larvas de Mosca-Soldado-Negra (BSF)
-A farinha de BSF é uma fonte sustentável de proteína de alta qualidade, produzida a partir de larvas criadas em um sistema de economia circular. Rica em aminoácidos essenciais, lipídios, minerais e compostos bioativos, é uma excelente alternativa para formulações destinadas à aquicultura, avicultura, suinocultura, pet food e outras aplicações em nutrição animal.
-Principais benefícios:
-    • Alto teor proteico. 
-    • Excelente digestibilidade. 
-    • Fonte natural de nutrientes essenciais. 
-    • Produção sustentável com baixa pegada ambiental. 
-    • Contribuição para a redução da dependência de ingredientes convencionais.</p>
+          <span class="product-tag" data-i18n="portfolio.tags.profly">PROFLY&reg;</span>
+          <h2 data-i18n="portfolio.p3.title">Farinha de Larvas de Mosca-Soldado-Negra (BSF)</h2>
+          <p class="product-lead" data-i18n="portfolio.p3.lead">Fonte sustentável de proteína de alta qualidade, rica em aminoácidos essenciais, lipídios, minerais e compostos bioativos.</p>
+          <div class="product-details">
+            <div class="product-block product-block--full">
+              <h3 data-i18n="portfolio.sections.benefits">Principais benefícios</h3>
+              <ul>
+                <li data-i18n="portfolio.p3.bens.0">Alto teor proteico</li>
+                <li data-i18n="portfolio.p3.bens.1">Excelente digestibilidade</li>
+                <li data-i18n="portfolio.p3.bens.2">Fonte natural de nutrientes essenciais</li>
+                <li data-i18n="portfolio.p3.bens.3">Produção sustentável com baixa pegada ambiental</li>
+                <li data-i18n="portfolio.p3.bens.4">Redução da dependência de ingredientes convencionais</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </article>
 
-      <!-- Produto 4 -->
-      <article class="product-card">
+      <article class="product-card product-card--reverse">
         <div class="product-card__media">
-          <img src="img/Oleo.jpeg" alt="Produto 4">
+          <img src="img/Oleo.jpeg" data-i18n-alt="portfolio.p4.alt" alt="Óleo de BSF">
         </div>
         <div class="product-card__content">
-          <h3>Produto 4</h3>
-          <p>Óleo de BSF
-O óleo de BSF é um ingrediente funcional obtido a partir das larvas da Mosca-Soldado-Negra, caracterizado pela presença de ácidos graxos de interesse nutricional, especialmente o ácido láurico. Pode ser utilizado em formulações para nutrição animal, contribuindo como fonte energética e ingrediente funcional.
-Principais benefícios:
-    • Fonte concentrada de energia. 
-    • Rico em ácido láurico. 
-    • Excelente estabilidade oxidativa. 
-    • Alternativa sustentável a óleos convencionais. 
-    • Aplicação em rações para diferentes espécies animais.</p>
+          <span class="product-tag" data-i18n="portfolio.tags.functional">Ingrediente funcional</span>
+          <h2 data-i18n="portfolio.p4.title">Óleo de BSF</h2>
+          <p class="product-lead" data-i18n="portfolio.p4.lead">Ingrediente funcional rico em ácidos graxos de interesse nutricional, especialmente ácido láurico, para formulações em nutrição animal.</p>
+          <div class="product-details">
+            <div class="product-block product-block--full">
+              <h3 data-i18n="portfolio.sections.benefits">Principais benefícios</h3>
+              <ul>
+                <li data-i18n="portfolio.p4.bens.0">Fonte concentrada de energia</li>
+                <li data-i18n="portfolio.p4.bens.1">Rico em ácido láurico</li>
+                <li data-i18n="portfolio.p4.bens.2">Excelente estabilidade oxidativa</li>
+                <li data-i18n="portfolio.p4.bens.3">Alternativa sustentável a óleos convencionais</li>
+                <li data-i18n="portfolio.p4.bens.4">Aplicação em rações para diferentes espécies</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </article>
 
-      <!-- Produto 5 -->
       <article class="product-card">
         <div class="product-card__media">
-          <img src="img/Fertilizante.jpeg" alt="Produto 5">
+          <img src="img/Fertilizante.jpeg" data-i18n-alt="portfolio.p5.alt" alt="Fertilizante orgânico Frass">
         </div>
         <div class="product-card__content">
-          <h3>Produto 5</h3>
-          <p>Fertilizante Orgânico (Frass)
-O frass é um fertilizante orgânico natural proveniente do processo de criação das larvas. Rico em matéria orgânica e nutrientes, auxilia na melhoria da fertilidade do solo, no desenvolvimento das plantas e na promoção da atividade microbiológica.
-Principais benefícios:
-    • Melhora a estrutura do solo. 
-    • Favorece a retenção de água. 
-    • Fonte natural de nutrientes. 
-    • Contribui para a agricultura sustentável. 
-    • Pode ser utilizado em diversas culturas agrícolas.</p>
+          <span class="product-tag" data-i18n="portfolio.tags.agriculture">Agricultura</span>
+          <h2 data-i18n="portfolio.p5.title">Fertilizante Orgânico (Frass)</h2>
+          <p class="product-lead" data-i18n="portfolio.p5.lead">Fertilizante natural proveniente do processo de criação das larvas, rico em matéria orgânica e nutrientes para o solo.</p>
+          <div class="product-details">
+            <div class="product-block product-block--full">
+              <h3 data-i18n="portfolio.sections.benefits">Principais benefícios</h3>
+              <ul>
+                <li data-i18n="portfolio.p5.bens.0">Melhora a estrutura do solo</li>
+                <li data-i18n="portfolio.p5.bens.1">Favorece a retenção de água</li>
+                <li data-i18n="portfolio.p5.bens.2">Fonte natural de nutrientes</li>
+                <li data-i18n="portfolio.p5.bens.3">Contribui para a agricultura sustentável</li>
+                <li data-i18n="portfolio.p5.bens.4">Utilização em diversas culturas agrícolas</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -199,60 +231,11 @@ Principais benefícios:
 <footer class="site-footer">
   <div class="footer-content">
     <span class="footer-brand">PROTE<span class="i-icon">I</span>NS &copy; 2026</span>
-    <span class="footer-rights">Todos os direitos reservados</span>
+    <span class="footer-rights" data-i18n="footer.rights">Todos os direitos reservados</span>
   </div>
 </footer>
-<script>
-  // Menu mobile
-  document.getElementById('menuToggle').addEventListener('click', () => {
-    document.getElementById('navLinks').classList.toggle('open');
-  });
-
-  // Dropdown de idiomas
-  const langSwitch = document.getElementById('langSwitch');
-  const langDropdown = document.getElementById('langDropdown');
-  const currentFlag = document.getElementById('currentFlag');
-  const currentLangLabel = document.getElementById('currentLangLabel');
-  const langOptions = document.querySelectorAll('.lang-option');
-
-  const labels = { 'pt-BR': 'PT-BR', 'en': 'EN', 'es': 'ES' };
-
-  langSwitch.addEventListener('click', (e) => {
-    langDropdown.classList.toggle('show');
-    langSwitch.classList.toggle('open');
-  });
-
-  // Fecha o dropdown ao clicar fora
-  document.addEventListener('click', (e) => {
-    if (!langSwitch.contains(e.target)) {
-      langDropdown.classList.remove('show');
-      langSwitch.classList.remove('open');
-    }
-  });
-
-  langOptions.forEach(option => {
-    option.addEventListener('click', () => {
-      const lang = option.dataset.lang;
-
-      // Atualiza bandeira e label exibidos
-      currentFlag.innerHTML = option.querySelector('.flag').innerHTML;
-      currentLangLabel.textContent = labels[lang];
-
-      // Marca opção selecionada
-      langOptions.forEach(o => o.classList.remove('selected'));
-      option.classList.add('selected');
-
-      // Fecha dropdown
-      langDropdown.classList.remove('show');
-      langSwitch.classList.remove('open');
-
-      // Dispara evento para integração com a API de tradução do site
-      document.dispatchEvent(new CustomEvent('languageChange', {
-        detail: { lang: lang }
-      }));
-    });
-  });
-</script>
+<script src="js/translations.js"></script>
+<script src="js/i18n.js"></script>
 
 </body>
 
