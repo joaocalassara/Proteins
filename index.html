@@ -79,8 +79,8 @@
  
 <section class="hero">
     <div class="hero-content">
-      <h1>Algum Texto muito <span class="highlight">foda</span> que ainda não temos</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+      <h1>Proteínas alternativas para a nutrição animal do <span class="highlight">futuro</span></h1>
+      <p>A PROTEINS – Proteínas Alternativas, residente no Biopark de Toledo–PR, pesquisa, desenvolve e produz ingredientes sustentáveis a partir de Black Soldier Fly (BSF), com qualidade, rastreabilidade e eficiência.</p>
       <div class="hero-buttons">
         <a href="contato.html" class="btn btn-light">Entre em contato</a>
         <a href="portfolio.html" class="btn btn-gold">Conheça nossos produtos!</a>
@@ -105,8 +105,8 @@
         </button>
       </div>
       <div class="showcase-info">
-        <h3>Neymar Jr</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        <h3>Black Soldier Fly (BSF)</h3>
+        <p>Larvas de <em>Hermetia illucens</em> transformam resíduos orgânicos em proteína e óleo de alta qualidade, com ciclo de vida curto e produção adaptável a sistemas verticais e automatizados.</p>
       </div>
     </article>
 
@@ -132,8 +132,13 @@
 </footer>
 <script>
   // Menu mobile
+  const navLinks = document.getElementById('navLinks');
   document.getElementById('menuToggle').addEventListener('click', () => {
-    document.getElementById('navLinks').classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
   });
  
   // Dropdown de idiomas

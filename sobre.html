@@ -246,8 +246,13 @@
 </footer>
 <script>
   // Menu mobile
+  const navLinks = document.getElementById('navLinks');
   document.getElementById('menuToggle').addEventListener('click', () => {
-    document.getElementById('navLinks').classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
   });
  
   // Dropdown de idiomas

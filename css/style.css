@@ -1,7 +1,7 @@
 .home-main {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 60px;
+    padding: 80px 0 100px;
 }
 
 /* ---------- Tela inicial (above the fold) ---------- */
@@ -18,7 +18,7 @@
     display: flex;
     align-items: flex-start;
     gap: 40px;
-    padding: 70px 20px 0;
+    padding: 175px 20px 0;
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
@@ -45,7 +45,7 @@
     font-size: 17px;
     line-height: 1.7;
     margin: 26px 0 36px;
-    max-width: 480px;
+    max-width: 560px;
 }
 
 .hero-buttons {
@@ -83,13 +83,17 @@
 /* ---------- Showcase ---------- */
 .showcase {
     display: flex;
-    gap: 24px;
+    gap: 28px;
     padding: 0 20px;
     flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .showcase-card {
     flex: 1 1 320px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
     background: var(--bg-dark);
     border: 1px solid var(--border-gold);
     border-radius: 14px;
@@ -98,7 +102,8 @@
 
 .showcase-media {
     position: relative;
-    height: 230px;
+    flex: 1;
+    min-height: 300px;
     background: linear-gradient(135deg, #2c2c2c, #181818);
 }
 
@@ -129,32 +134,37 @@
 }
 
 .showcase-info {
-    padding: 22px 24px;
+    padding: 28px 28px 32px;
 }
 
 .showcase-info h3 {
     color: var(--cream);
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .showcase-info p {
     color: var(--gray-text);
-    font-size: 13px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.showcase-info p em {
+    color: var(--cream);
+    font-style: italic;
 }
 
 .showcase-thumbs {
     display: flex;
-    gap: 10px;
-    padding: 16px 20px;
+    gap: 12px;
+    padding: 22px 24px 28px;
     border-top: 1px solid var(--border-gold);
 }
 
 .thumb {
     flex: 1;
-    height: 50px;
+    height: 72px;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border-gold);
@@ -167,7 +177,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 30px 20px;
+        padding: 110px 20px 30px;
     }
 
     .hero-content {
