@@ -158,12 +158,19 @@
 
 .bsf-media {
     flex: 1 1 320px;
-    min-height: 280px;
+    height: 280px;
     border-radius: 14px;
     border: 1px solid var(--border-gold);
-    background:
-        linear-gradient(135deg, rgba(247, 197, 0, 0.08) 0%, transparent 60%),
-        linear-gradient(160deg, #2a2820, #141412);
+    overflow: hidden;
+    background: var(--bg-dark);
+}
+
+.bsf-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 /* ---------- Fazenda Vertical ---------- */
@@ -194,20 +201,16 @@
 .farm-photo {
     border-radius: 14px;
     border: 1px solid var(--border-gold);
-    min-height: 180px;
-    background: linear-gradient(135deg, #2c2c2c, #181818);
+    height: 200px;
+    overflow: hidden;
+    background: var(--bg-dark);
 }
 
-.farm-photo--trays {
-    background:
-        linear-gradient(135deg, rgba(247, 197, 0, 0.06) 0%, transparent 50%),
-        linear-gradient(160deg, #252520, #121210);
-}
-
-.farm-photo--racks {
-    background:
-        linear-gradient(225deg, rgba(247, 197, 0, 0.06) 0%, transparent 50%),
-        linear-gradient(200deg, #1e1e1c, #0f0f0e);
+.farm-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .farm-highlights {
@@ -379,26 +382,16 @@
 }
 
 .app-media {
-    height: 160px;
-    background: linear-gradient(135deg, #2c2c2c, #181818);
+    height: 200px;
+    overflow: hidden;
+    background: var(--bg-dark);
 }
 
-.app-card:nth-child(1) .app-media {
-    background:
-        linear-gradient(135deg, rgba(0, 80, 120, 0.25) 0%, transparent 60%),
-        linear-gradient(160deg, #1a2228, #0e1214);
-}
-
-.app-card:nth-child(2) .app-media {
-    background:
-        linear-gradient(135deg, rgba(180, 120, 40, 0.2) 0%, transparent 60%),
-        linear-gradient(160deg, #282018, #141008);
-}
-
-.app-card:nth-child(3) .app-media {
-    background:
-        linear-gradient(135deg, rgba(160, 60, 60, 0.2) 0%, transparent 60%),
-        linear-gradient(160deg, #241818, #120c0c);
+.app-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .app-card h3 {
@@ -430,7 +423,7 @@
     }
 
     .bsf-media {
-        min-height: 220px;
+        height: 220px;
     }
 
     .farm-gallery {
