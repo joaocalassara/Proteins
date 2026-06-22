@@ -1,9 +1,10 @@
-  :root {
-      --bg-dark: #2e2825;
-      --border-gold: #6b5333;
-      --gold: #c9974f;
-      --cream: #f3ede4;
-      --gray-text: #c9c3bb;
+:root {
+      --bg-dark: #1c1c1c;
+      --border-gold: rgba(247, 197, 0, 0.35);
+      --gold: #f7c500;
+      --cream: #f5f4ef;
+      --gray-text: #b6b6ae;
+      --page-bg: #0e0e0e;
   }
 
   * {
@@ -13,7 +14,11 @@
   }
 
   body {
-      background: #1b1715;
+      background-color: var(--page-bg);
+      background-image:
+          radial-gradient(circle 320px at 6% 360px, rgba(247, 197, 0, 0.22) 0%, rgba(247, 197, 0, 0.08) 50%, rgba(247, 197, 0, 0) 100%),
+          radial-gradient(circle 260px at 60% 430px, rgba(247, 197, 0, 0.10) 0%, rgba(247, 197, 0, 0) 100%);
+      background-repeat: no-repeat;
       font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
       min-height: 100vh;
       padding: 20px;
@@ -30,6 +35,8 @@
       padding: 14px 28px;
       flex-wrap: wrap;
       gap: 16px;
+      position: relative;
+      z-index: 1;
   }
 
   .right-group {
@@ -177,13 +184,10 @@
   }
 
   .site-footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
       width: 100%;
-      width: 100%;
-      background: #1b1715;
+      background: var(--page-bg);
       padding: 20px 28px;
+      margin-top: 40px;
   }
 
   .footer-content {
@@ -250,3 +254,40 @@
           justify-content: space-between;
       }
   }
+/* ---------- Divisor (compartilhado) ---------- */
+.divider {
+    border: none;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 20px;
+}
+
+/* ---------- Título de seção + ícone "E" da marca (compartilhado) ---------- */
+.section-title {
+    text-align: center;
+    color: var(--cream);
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.section-title .hl {
+    color: var(--gold);
+}
+
+.e-bars {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    vertical-align: middle;
+    margin: 0 1px;
+}
+
+.e-bars span {
+    display: block;
+    width: 0.62em;
+    height: 0.13em;
+    border-radius: 2px;
+    background: var(--gold);
+}
